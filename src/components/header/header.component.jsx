@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 // REDUX
 import { connect } from "react-redux";
 import CartIcon from "../cart-icon/cart-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 const Header = ({ currentUser }) => (
   <div className="header">
@@ -34,6 +35,7 @@ const Header = ({ currentUser }) => (
       )}
       <CartIcon />
     </div>
+    <CartDropdown />
   </div>
 );
 
