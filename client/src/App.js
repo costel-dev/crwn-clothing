@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import "./App.css";
+import { GlobalStyle } from "./global.styles";
 
 import Header from "./components/header/header.component";
 import SignInAndSignUpPage from "./pages/signIn-and-signUp/signIn-and-signUp.component";
@@ -22,6 +22,7 @@ const App = ({ checkUserSession, currentUser }) => {
 
     return (
       <div>
+        <GlobalStyle />
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
