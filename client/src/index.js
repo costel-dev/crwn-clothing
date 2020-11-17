@@ -8,6 +8,9 @@ import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
 import {store, persistor} from "./redux/store";
 
+// progressive web application - serviceWorker
+import * as serviceWorker from "./serviceWorker";
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -20,3 +23,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+serviceWorker.register();
